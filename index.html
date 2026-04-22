@@ -1,48 +1,118 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Loja Tech</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MODA | Coleção Premium</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <header>
-        <h1>🛒 Loja Tech</h1>
-        <p>Os melhores produtos gamers</p>
-    </header>
+<header>
+  <nav>
+    <div class="logo">MODA<span>.</span></div>
 
-    <section class="produtos">
-    <h1>Loja TechGames Online</h1>
-    <h2>Produtos</h2>
+    <ul class="nav-links">
+      <li><a href="#" onclick="filtrar('todos')">Novidades</a></li>
+      <li><a href="#" onclick="filtrar('masculino')">Masculino</a></li>
+      <li><a href="#" onclick="filtrar('feminino')">Feminino</a></li>
+      <li><a href="#" onclick="abrirCarrinho()">Carrinho</a></li>
+    </ul>
 
-        <div class="produto">
-            <img src="https://images.unsplash.com/photo-1587202372775-989de9d16c7b" alt="Teclado">
-            <h3>Teclado Gamer RGB</h3>
-            <p>R$150</p>
-            <button onclick="comprar('Teclado Gamer')">Comprar</button>
-        </div>
+    <div class="cart-box">
+      R$ <span id="cart-total">0,00</span>
+    </div>
+  </nav>
+</header>
 
-        <div class="produto">
-            <img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7" alt="Mouse">
-            <h3>Mouse Gamer</h3>
-            <p>R$80</p>
-            <button onclick="comprar('Mouse Gamer')">Comprar</button>
-        </div>
+<section class="hero">
+  <div class="hero-content">
+    <h1>Eleve Seu Estilo</h1>
+    <p>Explore nossa coleção premium.</p>
+    <a href="#shop" class="btn-primary">Comprar Agora</a>
+  </div>
+</section>
 
-        <div class="produto">
-            <img src="https://images.unsplash.com/photo-1580894894513-541e068a3e2b" alt="Headset">
-            <h3>Headset Gamer</h3>
-            <p>R$120</p>
-            <button onclick="comprar('Headset')">Comprar</button>
-        </div>
+<main id="shop" class="container">
+  <h2 class="section-title">Produtos em Destaque</h2>
 
-    </section>
+  <div class="product-grid">
 
-    <footer>
-        <p>Grupo 2 - Loja Online</p>
-    </footer>
+    <!-- MASCULINO -->
+    <div class="card masculino">
+      <div class="img-container">
+        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=500">
+      </div>
+      <div class="card-info">
+        <h3>Jaqueta Bomber</h3>
+        <p class="price">R$ 120,00</p>
+        <button onclick="addToCart('Jaqueta Bomber',120)">Adicionar</button>
+      </div>
+    </div>
 
-    <script src="script.js"></script>
+    <div class="card masculino">
+      <div class="img-container">
+        <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=500">
+      </div>
+      <div class="card-info">
+        <h3>Jeans Slim</h3>
+        <p class="price">R$ 89,00</p>
+        <button onclick="addToCart('Jeans Slim',89)">Adicionar</button>
+      </div>
+    </div>
+
+    <!-- FEMININO -->
+    <div class="card feminino">
+      <div class="img-container">
+        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500">
+      </div>
+      <div class="card-info">
+        <h3>Camiseta Oversized</h3>
+        <p class="price">R$ 59,00</p>
+        <button onclick="addToCart('Camiseta Oversized',59)">Adicionar</button>
+      </div>
+    </div>
+
+    <div class="card feminino">
+      <div class="img-container">
+        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=500">
+      </div>
+      <div class="card-info">
+        <h3>Vestido Casual</h3>
+        <p class="price">R$ 139,00</p>
+        <button onclick="addToCart('Vestido Casual',139)">Adicionar</button>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<section id="carrinho" class="carrinho hidden container">
+    <h2 class="section-title">Seu Carrinho</h2>
+  
+    <ul id="lista-carrinho" style="list-style:none; padding:0;"></ul>
+  
+    <div style="margin-top:20px; font-weight:600; font-size:1.2rem;">
+      Total: R$ <span id="total-final">0,00</span>
+    </div>
+  
+    <div style="margin-top:30px;">
+      <label style="font-size:0.9rem; color:#666;">Forma de Pagamento</label>
+      <select style="width:100%; padding:12px; margin-top:10px;">
+        <option>Cartão de Crédito</option>
+        <option>PIX</option>
+        <option>Boleto</option>
+      </select>
+    </div>
+  
+    <button style="margin-top:20px;" onclick="finalizarCompra()">
+      Finalizar Compra
+    </button>
+  </section>
+
+<script src="script.js"></script>
 </body>
 </html>
