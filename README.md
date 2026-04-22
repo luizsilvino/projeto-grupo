@@ -51,7 +51,7 @@ Design minimalista e elegante, inspirado em lojas premium de moda.
 1. Baixe ou clone o repositório:
 
 ```
-git clone https://github.com/seu-usuario/seu-repo.git
+https://github.com/luizsilvino/projeto-grupo
 ```
 
 2. Abra o arquivo:
