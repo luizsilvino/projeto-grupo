@@ -1,5 +1,8 @@
 console.log("Loja iniciada!");
 
-function comprar(){
-    alert("Compra realizada com sucesso!");
+function comprar(produto){
+
+function comprar(produto){
+     alert("Você comprou: " + produto)
+}
 }
