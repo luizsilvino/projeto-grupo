@@ -2,36 +2,45 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Loja Online</title>
+    <title>Loja Tech</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Loja TechGamer</h1>
+    <header>
+        <h1>🛒 Loja Tech</h1>
+        <p>Os melhores produtos gamers</p>
+    </header>
 
-    <h2>Produtos</h2>
+    <section class="produtos">
 
-    <div>
-        <h3>Teclado Gamer</h3>
-        <p>Preço: R$150</p>
-        <p>Teclado mecânico com LED</p>
-        <button onclick="comprar()">Comprar</button>
-    </div>
+        <div class="produto">
+            <img src="https://images.unsplash.com/photo-1587202372775-989de9d16c7b" alt="Teclado">
+            <h3>Teclado Gamer RGB</h3>
+            <p>R$150</p>
+            <button onclick="comprar('Teclado Gamer')">Comprar</button>
+        </div>
 
-    <div>
-        <h3>Mouse Gamer</h3>
-        <p>Preço: R$80</p>
-        <p>Mouse com alta precisão</p>
-        <button onclick="comprar()">Comprar</button>
-    </div>
+        <div class="produto">
+            <img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7" alt="Mouse">
+            <h3>Mouse Gamer</h3>
+            <p>R$80</p>
+            <button onclick="comprar('Mouse Gamer')">Comprar</button>
+        </div>
 
-    <div>
-        <h3>Headset</h3>
-        <p>Preço: R$120</p>
-        <p>Som surround e microfone</p>
-        <button onclick="comprar()">Comprar</button>
-    </div>
+        <div class="produto">
+            <img src="https://images.unsplash.com/photo-1580894894513-541e068a3e2b" alt="Headset">
+            <h3>Headset Gamer</h3>
+            <p>R$120</p>
+            <button onclick="comprar('Headset')">Comprar</button>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>Grupo 2 - Loja Online</p>
+    </footer>
 
     <script src="script.js"></script>
-
 </body>
 </html>
