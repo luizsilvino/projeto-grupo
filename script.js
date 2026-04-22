@@ -86,3 +86,5 @@ function finalizarCompra() {
   atualizarCarrinho();
   document.getElementById('cart-total').innerText = '0,00';
 }
+
+console.log("Conflito resolvido com sucesso!");
