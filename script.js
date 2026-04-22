@@ -1,4 +1,5 @@
 console.log("Loja iniciada!");
+console.log("Nova função criada!");
 
 function comprar(produto){
 
